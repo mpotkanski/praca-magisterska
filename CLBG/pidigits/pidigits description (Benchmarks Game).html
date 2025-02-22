@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="all">
+<meta name="description" content="What the pidigits benchmarks game programs should do.">
+<title>pidigits description (Benchmarks Game) </title>
+<style><!-- 
+a{color:black;text-decoration:none}article{padding:0 0 2.9em}article,div,header{margin:auto;max-width:31em;width:92%}body{font:100% Droid Sans, Ubuntu, Verdana, sans-serif;margin:0;-webkit-text-size-adjust:100%}h3, h1, h2, nav li a{font-family:Ubuntu Mono,Consolas,Menlo,monospace}h3{font-size:1.4em;font-weight:bold;margin:0;padding: .4em}h3, h3 a{color:white;background-color:#77216f}h3 small{font-size:0.64em}h1,h2{margin:1.5em 0 0}h1{font-size:1.4em;font-weight:normal}h2{font-size:1.2em}nav li{list-style-type:none;vertical-align:top}nav li a{display:block;font-size:1.2em;margin: .5em .5em 0;padding: .5em .5em .3em}nav p{margin:0 .5em}nav ul{clear:left;margin:-0.3em 0 1.5em;padding-left:0;text-align:center}p{color:#333;line-height:1.4;margin: .3em 0 0}.external{border-bottom:.1em dashed #333}p a,span{border-bottom: .1em solid #333;padding-bottom: .1em}@media only screen and (min-width: 33em){nav li{display:inline-block}nav p{text-align:left;width:17em}}@media only screen and (min-width: 60em){article,div,header{font-size:1.25em}}
+--></style>
+<link rel="shortcut icon" href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/favicon.ico">
+</head><body><header>
+  <h3><a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html">The&nbsp;<small>Computer&nbsp;Language</small><br>25.02 Benchmarks&nbsp;Game</a></h3>
+</header>
+<div>
+  <nav>
+    <ul>
+      <li><a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/description/fannkuchredux.html#fannkuchredux"><span>fannkuch-redux</span></a><p>Indexed-access to tiny integer-sequence
+      </p></li><li><a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/description/nbody.html#nbody"><span>n-body</span></a><p>Double-precision N-body simulation
+      </p></li><li><a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/description/spectralnorm.html#spectralnorm"><span>spectral-norm</span></a><p>Eigenvalue using the power method
+      </p></li><li><a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/description/mandelbrot.html#mandelbrot"><span>mandelbrot</span></a><p>Generate Mandelbrot set portable bitmap file
+      </p></li><li><a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/description/fasta.html#fasta"><span>fasta</span></a><p>Generate and write random DNA sequences
+      </p></li><li><a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/description/knucleotide.html#knucleotide"><span>k-nucleotide</span></a><p>Hashtable update and k-nucleotide strings
+      </p></li><li><a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/description/revcomp.html#revcomp"><span>reverse-complement</span></a><p>Read DNA sequences - write their reverse-complement
+      </p></li><li><a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/description/binarytrees.html#binarytrees"><span>binary-trees</span></a><p>Allocate and deallocate many many binary trees
+    </p></li></ul>
+  </nav>
+</div>
+<article>
+  <h1 id="pidigits">pidigits description</h1>
+  <aside>
+    <p><a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/performance/pidigits.html">program measurements</a>
+  </p></aside>
+  <section>
+    <p><br>[ Contentious. Different libraries. ]        
+    </p><h2>Background</h2>
+    <p>MathWorld: <a class="external" href="http://mathworld.wolfram.com/PiDigits.html">Pi Digits.</a>
+    </p><p><a class="external" href="https://news.ycombinator.com/item?id=25626720">HN discussion</a>    
+  </p></section>
+    <h2>Variance</h2>
+    <p>Some language implementations have arbitrary precision arithmetic
+ built-in; some provide an arbitrary precision arithmetic library; some 
+use a third-party library (<a class="external" href="http://gmplib.org/">GMP</a>); some provide built-in arbitrary precision arithmetic by wrapping a third-party library.
+  
+    </p><h2>The work</h2>
+    <p>The work is to use aribitrary precision arithmetic and the same 
+step-by-step single-threaded algorithm to generate digits of Pi. Do both
+ extract(3) and extract(4). Don't optimize away the work.
+  
+  </p><section>
+    <h2>How to implement</h2>
+    <p>We ask that contributed programs not only give the correct result, but also <b>use the sequential algorithm</b> to calculate that result.
+    </p><p>Each program should:
+    </p><ul>
+      <li><p>calculate the first N digits of Pi
+      </p></li><li><p>print the digits 10-to-a-line, with the running total of digits calculated
+    </p></li></ul>
+    <p><b>diff</b> program output N = 30 with this <a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/download/pidigits-output.txt">output file</a> to check your program output has the correct format, before you <a href="https://salsa.debian.org/benchmarksgame-team/benchmarksgame/blob/master/README.md">contribute your program</a>.
+    </p><p>Use a larger command line argument (10000) to check program performance.
+    </p><p>Adapt the <b>step-by-step</b> algorithm given on pages 4,6 &amp; 7 of [pdf 156KB] <a class="external" href="http://web.comlab.ox.ac.uk/oucl/work/jeremy.gibbons/publications/spigot.pdf">Unbounded Spigot Algorithms for the Digits&nbsp;of&nbsp;Pi</a>. (<b>Not</b> the deliberately obscure version given on page 2. <b>Not</b> the Rabinowitz-Wagon algorithm.)
+  </p></section>
+
+</article>
+<div>
+  <nav>
+    <ul>
+      <li><a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/description/regexredux.html#regexredux"><span>regex-redux</span></a><p>Match DNA 8-mers and substitute magic patterns
+    </p></li></ul>
+  </nav>
+</div>
+
+<footer>
+  <nav>
+    <ul>
+      <li>&nbsp;
+    </li></ul>
+  </nav>
+</footer>
+
+</body></html>
