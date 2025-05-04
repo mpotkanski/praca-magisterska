@@ -1,0 +1,45 @@
+strona tytułowa: Grudzień 2024 -> Kwiecień 2025
+Zmieniłem osobę, w której napisane jest streszczenie.
+strona 7: który z nich cechuje się większą szybkością wykonania kodu -> szczegółów którymi się różnią
+strona 7: Mowa tu o bajtkodach czy maszynach wirtualnych. -> takie jak bajtkod czy maszyny wirtualne.
+strona 7: zapewniał funkcjonalność WORA (ang. Write Once, Run Anywhere), zapewniającą
+darmowe środowisko uruchomieniowe na popularnych platformach. -> zapewniała funkcjonalność WORA (ang. Write Once, Run Anywhere), udostępniała
+darmowe środowisko uruchomieniowe na popularnych platformach.
+strona 7: Dość bezpieczny i wyposażony w konfigurowalne zabezpieczenia pozwalał na ograniczenia dostępu do sieci i plików. ->
+Dość bezpieczna i wyposażona w konfigurowalne zabezpieczenia pozwalała na ograniczenia dostępu do sieci i plików.
+strona 7: Wraz z pojawieniem się Java 2 (wydanej początkowo jako J2SE 1.2 w grudniu 1998 - 1999), ->
+Wraz z pojawieniem się desktopowej wersji Java 2 (wydanej początkowo jako J2SE 1.2 w grudniu 1998 - 1999, przemianowanej w 2006 na Java SE),
+strona 7: usunąłem: Wersja desktopowa została przemianowana na J2SE. W 2006 w celach marketingowych firma Sun zmieniła nazwy nowych wersji J2 na odpowiednio Java EE,
+Java ME i Java SE.
+strona 8: poprawiłem cudzysłowy
+strona 8: f-stringu -> f-stringów
+strona 8: rozbudowałem historię Javy
+strona 9: rozbudowałem historię Pythona
+Dodałem bibliografię dotyczącą historii Javy i Pythona
+Połączyłem rozdziały Popularność i Znaczenie. Dodałem omówienie.
+Poprawiłem rozdział Podstawowe pojęcia: zmieniłem kolejność, najpierw Maszyna wirtualna, potem Bajtokod, dodałem
+podrozdział Rodzaje maszyn wirtualnych.
+W rozdziale Omówienie instukcji bajtkodów zmieniłem typ Booleanowski na Boolowski, zmieniłem kolejność, najpierw instrukcje
+przenoszące sterowanie, potem tworzące obiekt i manipulujące nim.
+Zmieniłem wprowadzenie do rozdziału 2.1 Instrukcje bajtkodu Javy
+Podaję ich listę zmieniłem na Oto ich lista
+Zmiana osoby, wk tórej piszę w Stuktura bajtkodu Javy
+Zmieniłem w rozdziale 3 Wstęp
+co pozwala na bardziej elastyczne kodowanie -> co sprawia, że kodowanie jest ułatwione i bardziej elastyczne
+
+
+Zawiera także cykliczny moduł zbierający elementy bezużyteczne do obsługi odwołań cyklicznych. zmieniłem na:
+
+Garbage Collector posiada dodatkowe algorytmy wykrywające cykle i jeśli takowe wykryje – to je przerywa. To natomiast powoduje spadek liczby referencji a w konsekwencji sprzątnięcie obiektu.
+
+która działa -> która oparta jest
+
+podczas pierwszego wykoywania, a nie w czasie kompilacji. -> przy pierwszym odwołaniu
+
+usunąłem (jre\textbackslash lib)
+
+jest przydzielona pamięć i jej wartości domyślne.
+Dla wszystkich zmiennych statycznych zostanie przydzielona
+    pamięć i wartości domyślne
+
+oryginalne -> początkowe
