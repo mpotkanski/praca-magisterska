@@ -7,7 +7,7 @@ public class Addition {
         // Start measuring execution time
         long startTime = System.nanoTime();
 
-        count_function(100000000);
+        count_function(100_000_000);
 
         // Stop measuring execution time
         long endTime = System.nanoTime();
