@@ -5,10 +5,10 @@ from sortedcontainers import SortedSet
 from sortedcontainers import SortedDict
 
 def my_function():
-  s = list(range(0,10000000))
-  s2 = list(range(0,10000000))
+  s = list(range(0,10_000_000))
+  s2 = list(range(0,10_000_000))
   
-  for i in range(0, 10000000):
+  for i in range(0, 10_000_000):
     s[i] = str(s[i])
     s2[i] = str(s2[i]*2)
     
@@ -20,7 +20,7 @@ def my_function():
   dict1 = {}
   dict2 = SortedDict()
   
-  for i in range(0, 10000000):
+  for i in range(0, 10_000_000):
       counts.add(s[i])
       sorted_set.add(s[i])
       dict1[s[i]] = s[i]
@@ -31,7 +31,7 @@ def my_function():
     # Start the stopwatch / counter 
     t1_start = perf_counter() 
   
-    for i in range(0, 10000000):
+    for i in range(0, 10_000_000):
       counts.discard(s2[i])
 
     # Stop the stopwatch / counter
@@ -41,7 +41,7 @@ def my_function():
 
     counts.clear()
     
-    for i in range(0, 10000000):
+    for i in range(0, 10_000_000):
       counts.add(s[i])
       
   for j in range(0,5):
@@ -49,7 +49,7 @@ def my_function():
     # Start the stopwatch / counter 
     t1_start = perf_counter() 
 
-    for i in range(0, 10000000):
+    for i in range(0, 10_000_000):
       sorted_set.discard(s2[i])
 		
     # Stop the stopwatch / counter
@@ -59,7 +59,7 @@ def my_function():
     
     sorted_set.clear()
     
-    for i in range(0, 10000000):
+    for i in range(0, 10_000_000):
       sorted_set.add(s[i])
       
   for j in range(0,5):
@@ -67,7 +67,7 @@ def my_function():
     # Start the stopwatch / counter 
     t1_start = perf_counter() 
 
-    for i in range(0, 10000000):
+    for i in range(0, 10_000_000):
       dict1.pop(s2[i], None)
 		
     # Stop the stopwatch / counter
@@ -77,7 +77,7 @@ def my_function():
     
     dict1.clear()
     	
-    for i in range(0, 10000000):
+    for i in range(0, 10_000_000):
       dict1[s[i]] = s[i]
       
   for j in range(0,5):
@@ -85,7 +85,7 @@ def my_function():
     # Start the stopwatch / counter 
     t1_start = perf_counter() 
 
-    for i in range(0, 10000000):
+    for i in range(0, 10_000_000):
       dict2.pop(s2[i], None)
 		
     # Stop the stopwatch / counter
@@ -95,7 +95,7 @@ def my_function():
     
     dict2.clear()
     
-    for i in range(0, 10000000):
+    for i in range(0, 10_000_000):
       dict2[s[i]] = s[i]
          
 my_function()
