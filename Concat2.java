@@ -3,12 +3,12 @@ import java.util.Arrays;
 public class Concat2 {
 
     public static void main(String[] args) {
-        int[] array1 = new int[10000000]; //000000
-        int[] array2 = new int[10000000];
+        int[] array1 = new int[10_000_000]; //000000
+        int[] array2 = new int[10_000_000];
 
-        for (int i=0; i < 10000000;i++) {
+        for (int i=0; i < 10_000_000;i++) {
             array1[i] = i;
-            array2[i] = i + 10000000;
+            array2[i] = i + 10_000_000;
         }	
 	
         int aLen = array1.length;
