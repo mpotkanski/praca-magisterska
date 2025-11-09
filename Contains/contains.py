@@ -5,10 +5,10 @@ from sortedcontainers import SortedSet
 from sortedcontainers import SortedDict
 
 def my_function():
-  s = list(range(0,10000000))
-  s2 = list(range(0,10000000))
+  s = list(range(0,10_000_000))
+  s2 = list(range(0,10_000_000))
   
-  for i in range(0, 10000000):
+  for i in range(0, 10_000_000):
     s[i] = str(s[i])
     s2[i] = str(s2[i]*2)
     
@@ -20,7 +20,7 @@ def my_function():
   dict1 = {}
   dict2 = SortedDict()
   
-  for i in range(0, 10000000):
+  for i in range(0, 10_000_000):
       counts.add(s[i])
       sorted_set.add(s[i])
       dict1[s[i]] = s[i]
@@ -31,7 +31,7 @@ def my_function():
     # Start the stopwatch / counter 
     t1_start = perf_counter() 
   
-    for i in range(0, 10000000):
+    for i in range(0, 10_000_000):
       s2[i] in counts
 
     # Stop the stopwatch / counter
@@ -44,7 +44,7 @@ def my_function():
     # Start the stopwatch / counter 
     t1_start = perf_counter() 
 
-    for i in range(0, 10000000):
+    for i in range(0, 10_000_000):
       s2[i] in sorted_set
 		
     # Stop the stopwatch / counter
@@ -57,7 +57,7 @@ def my_function():
     # Start the stopwatch / counter 
     t1_start = perf_counter() 
 
-    for i in range(0, 10000000):
+    for i in range(0, 10_000_000):
       s2[i] in dict1
 		
     # Stop the stopwatch / counter
@@ -70,7 +70,7 @@ def my_function():
     # Start the stopwatch / counter 
     t1_start = perf_counter() 
 
-    for i in range(0, 10000000):
+    for i in range(0, 10_000_000):
       s2[i] in dict2
 		
     # Stop the stopwatch / counter
