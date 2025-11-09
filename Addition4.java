@@ -32,7 +32,7 @@ public class Addition4 {
         BigInteger result2 = result.add(BigInteger.valueOf(x));
         
         b2 = new BigInteger("2000");
-        int exponent2 = 2000;
+        int exponent2 = 2_000;
  
         BigInteger result3 = b2.pow(exponent2);
         
