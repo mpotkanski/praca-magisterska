@@ -42,7 +42,7 @@ import java.util.*;
 @State(Scope.Thread)
 public class MyBenchmark {
 
-    int x = 10000000;
+    int x = 10_000_000;
     HashSet<String> counts = new HashSet<String>();
     TreeSet<String> counts2 = new TreeSet<String>();
     HashMap<String, String> map = new HashMap<>();
