@@ -21,7 +21,7 @@ def my_function():
     # Start the stopwatch / counter 
     t1_start = perf_counter() 
   
-    for i in range(0, 1_000_0000):
+    for i in range(0, 10_000_000):
       counts.add(s[i])
 
     # Stop the stopwatch / counter
