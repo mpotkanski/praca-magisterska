@@ -1,7 +1,7 @@
 import java.io.*;
 import java.math.BigInteger;
 
-public class Addition4 {
+public class Addition2 {
     // main function
     public static void main(String[] args)
     {
