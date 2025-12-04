@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Concat2 {
+public class Concat {
 
     public static void main(String[] args) {
         int[] array1 = new int[10_000_000]; //000000
